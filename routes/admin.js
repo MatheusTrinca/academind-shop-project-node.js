@@ -17,4 +17,8 @@ router.post('/add-product', adminController.postAddProducts);
 
 // podemos ter o mesmo caminho quando os metodos são diferetes (GET/POST)
 
+router.get('/edit-product/:productId', adminController.getEditProduct);
+
+router.post('/edit-product')
+
 module.exports = router;
