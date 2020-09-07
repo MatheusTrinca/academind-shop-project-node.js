@@ -1,16 +1,1 @@
-[
-  {
-    "title": "Kali Linux Revelated",
-    "imageUrl": "https://kali.training/wp-content/uploads/2017/06/kali-linux-revealed-book-mock-3.png",
-    "description": "Kali Linux Book",
-    "price": "99.90",
-    "id": "0.2227093224735206"
-  },
-  {
-    "id": "123",
-    "title": "Laptop       ",
-    "imageUrl": "https://i.zst.com.br/images/notebook-samsung-book-e30-intel-core-i3-10110u-10-geracao-4gb-de-ram-hd-1-tb-15-6-full-hd-windows-10-np550xcj-kt2br-photo1129601673-12-10-17.jpg       ",
-    "description": "Laptop with windows 10 running   ",
-    "price": "199.99"
-  }
-]
+[{"title":"Kali Linux Revelated","imageUrl":"https://kali.training/wp-content/uploads/2017/06/kali-linux-revealed-book-mock-3.png","description":"Kali Linux Book","price":"99.90","id":"0.2227093224735206"},{"id":"123","title":"Laptop       ","imageUrl":"https://i.zst.com.br/images/notebook-samsung-book-e30-intel-core-i3-10110u-10-geracao-4gb-de-ram-hd-1-tb-15-6-full-hd-windows-10-np550xcj-kt2br-photo1129601673-12-10-17.jpg       ","description":"Laptop with windows 10 running   ","price":"199.99"}]
