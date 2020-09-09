@@ -15,13 +15,16 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById(prodId, product => {
-    res.render('shop/product-detail', {
-      product: product,
-      pageTitle: product.title,
-      path: '/products',
+  Product.findById(prodId)
+    .then(([product]) => {
+      console.log(product);
+      res.render('shop/product-detail', {
+        product: product[0],
+        pageTitle: product.title,
+        path: '/products',
+      })
     })
-  });
+    .catch(err => console.log(err));
 }
 
 exports.getIndex = (req, res, next) => {
@@ -31,19 +34,19 @@ exports.getIndex = (req, res, next) => {
         prods: rows,
         pageTitle: 'My Shop',
         path: '/',
+      })
     })
-  })
-  .catch(err => console.log(err));;
+    .catch(err => console.log(err));;
 }
 
 exports.getCart = (req, res, next) => {
   Cart.getProducts(cart => {
     Product.fetchAll(products => {
       const cartProducts = [];
-      for(product of products){
+      for (product of products) {
         const cartProduct = cart.products.find(prod => prod.id === product.id);
-        if(cartProduct){
-          cartProducts.push({productData: product, qty: cartProduct.qty});
+        if (cartProduct) {
+          cartProducts.push({ productData: product, qty: cartProduct.qty });
         }
       }
       res.render('shop/cart', {
